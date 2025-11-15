@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hero - SEED_Haiti</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEED_Haiti</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Toast container -->
+
+  <!-- TOAST -->
   <div id="toast-container"></div>
 
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-box">S</div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="nav-buttons">
+        <button class="btn-ghost">Se connecter</button>
+        <button class="btn-primary">Commencer maintenant</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
 
-        <!-- Heading -->
+      <div class="hero-inner">
+
         <h1 class="hero-title">
           <span>Apprentissage </span>
           <span class="highlight">
@@ -24,33 +44,32 @@
               <path d="M2 8.5C78 3 152 1.5 298 6.5"></path>
             </svg>
           </span>
-          <span> pour</span>
-          <br />
+          <span> pour</span><br>
           <span>les étudiants haïtiens.</span>
         </h1>
 
-        <!-- Description -->
         <p class="hero-description">
           SEED_Haiti est la plateforme d'apprentissage alimentée par l'IA qui vous aide à 
           réussir vos examens NS4. Accédez à des ressources numériques, des quiz intelligents 
           et des plans d'étude personnalisés, 100% gratuitement.
         </p>
 
-        <!-- Form -->
+        <!-- FORM -->
         <form id="email-form" class="email-form">
           <input 
-            type="email" 
-            id="email" 
-            placeholder="vous@exemple.com" 
-            class="email-input"
+            id="email"
+            type="email"
+            placeholder="vous@exemple.com"
             required
-          />
-          <button type="submit" id="submit-btn" class="submit-btn">
+            class="email-input"
+          >
+          <button id="submit-btn" type="submit" class="submit-btn">
             Rejoindre
           </button>
         </form>
 
       </div>
+
     </div>
   </section>
 
