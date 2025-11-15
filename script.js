@@ -1,16 +1,15 @@
-// Simple email validator (replacement for Zod)
+// Validate email (replaces Zod)
 function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email.trim());
 }
 
-// Toast system
+// Toast
 function showToast(message, type = "success") {
   const container = document.getElementById("toast-container");
   const toast = document.createElement("div");
   toast.className = `toast ${type}`;
   toast.textContent = message;
-
   container.appendChild(toast);
 
   setTimeout(() => {
@@ -19,6 +18,7 @@ function showToast(message, type = "success") {
   }, 3000);
 }
 
+// Form logic
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("email-form");
   const emailInput = document.getElementById("email");
@@ -34,17 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Loading state
     submitBtn.disabled = true;
     submitBtn.textContent = "Envoi...";
 
-    // Fake delay
     await new Promise((res) => setTimeout(res, 1000));
 
-    // Success
-    showToast("Inscription réussie ! Vous recevrez bientôt des mises à jour.", "success");
+    showToast("Inscription réussie !", "success");
 
-    // Reset
     emailInput.value = "";
     submitBtn.disabled = false;
     submitBtn.textContent = "Rejoindre";
